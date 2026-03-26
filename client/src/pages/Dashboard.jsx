@@ -72,7 +72,7 @@ const Dashboard = () => {
           <h1 className="text-3xl font-outfit font-bold mb-2 text-[#F9FAFB]">
             Welcome back, <span className="bg-gradient-to-r from-[#F59E0B] to-[#D97706] bg-clip-text text-transparent">{user?.name}</span>
           </h1>
-          <p className="text-[#9CA3AF]">Continue your elite learning journey</p>
+          <p className="text-[#D1D5DB]">Continue your elite learning journey</p>
         </div>
       </RevealOnScroll>
 
@@ -90,7 +90,7 @@ const Dashboard = () => {
                 <stat.icon className="text-white" size={20} />
               </div>
               <p className="text-2xl font-bold text-[#F9FAFB]">{stat.value}</p>
-              <p className="text-[#9CA3AF] text-sm uppercase tracking-wider font-semibold">{stat.label}</p>
+              <p className="text-[#D1D5DB] text-sm uppercase tracking-wider font-semibold">{stat.label}</p>
             </div>
           </RevealOnScroll>
         ))}
@@ -101,13 +101,13 @@ const Dashboard = () => {
         <div className="bg-[#161F32] border border-[#1E293B] p-6 rounded-2xl mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#4B5563]" size={20} />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#9CA3AF]" size={20} />
               <input
                 type="text"
                 placeholder="Search courses..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-[#F9FAFB] placeholder-[#4B5563]"
+                className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-[#F9FAFB] placeholder-[#9CA3AF]"
               />
             </div>
             <Link to="/build" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] px-8 py-3 rounded-xl font-bold flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg">
@@ -148,7 +148,7 @@ const Dashboard = () => {
               <div className="w-20 h-20 bg-[#0A1122] rounded-full flex items-center justify-center mx-auto mb-6">
                  <Plus className="text-[#F59E0B]" size={32} />
               </div>
-              <p className="text-[#9CA3AF] text-xl mb-8">Your journey is waiting to begin.</p>
+              <p className="text-[#D1D5DB] text-xl mb-8">Your journey is waiting to begin.</p>
               <Link to="/build" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg">
                 Forge Your First Path
               </Link>

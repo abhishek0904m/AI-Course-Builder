@@ -60,45 +60,45 @@ const Register = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Full Name</label>
+            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Full Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#6B7280]"
               placeholder="John Doe"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Email</label>
+            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Email Address</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#6B7280]"
               placeholder="your@email.com"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Password</label>
+            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Choose Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#6B7280]"
               placeholder="••••••••"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Confirm Password</label>
+            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Confirm Password</label>
             <input
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#6B7280]"
               placeholder="••••••••"
             />
           </div>
@@ -112,7 +112,7 @@ const Register = () => {
           </button>
         </form>
 
-        <div className="mt-8 text-center text-[#9CA3AF]">
+        <div className="mt-8 text-center text-[#D1D5DB]">
           Already an initiate?{' '}
           <Link to="/login" className="text-[#F59E0B] hover:text-[#D97706] font-medium hover:underline">
             Login

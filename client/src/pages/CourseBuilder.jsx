@@ -67,7 +67,7 @@ const CourseBuilder = () => {
               </div>
               <div>
                 <h1 className="text-3xl font-outfit font-bold text-[#F9FAFB]">Forge Learning Path</h1>
-                <p className="text-[#9CA3AF]">Let AI architect your mastery journey</p>
+                <p className="text-[#D1D5DB]">Let AI architect your mastery journey</p>
               </div>
             </div>
           </RevealOnScroll>
@@ -81,7 +81,7 @@ const CourseBuilder = () => {
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   placeholder="e.g., Quantum Computing, Neural Networks, Advanced UI Design"
-                  className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB] placeholder-[#4B5563] transition-all"
+                  className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB] placeholder-[#9CA3AF] transition-all"
                   required
                 />
               </div>
@@ -131,7 +131,7 @@ const CourseBuilder = () => {
                       className={`py-4 rounded-xl font-bold transition-all duration-300 ${
                         level === lvl
                           ? 'bg-[#F59E0B] text-[#0A1122] shadow-[0_0_20px_rgba(245,158,11,0.2)]'
-                          : 'bg-[#0A1122] text-[#9CA3AF] border border-[#1E293B] hover:border-[#F59E0B]/50'
+                          : 'bg-[#0A1122] text-[#D1D5DB] border border-[#1E293B] hover:border-[#F59E0B]/50'
                       }`}
                     >
                       {lvl.charAt(0).toUpperCase() + lvl.slice(1)}
@@ -148,7 +148,7 @@ const CourseBuilder = () => {
                   value={goal}
                   onChange={(e) => setGoal(e.target.value)}
                   placeholder="e.g., Become a Senior Architect, Build a billion-dollar startup core, Master the fundamentals"
-                  className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB] placeholder-[#4B5563] min-h-[120px]"
+                  className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB] placeholder-[#9CA3AF] min-h-[120px]"
                   required
                 />
               </div>

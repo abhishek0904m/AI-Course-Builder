@@ -163,13 +163,13 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
               <h3 className="text-2xl font-bold mb-4 mt-8 text-[#F9FAFB]" {...props} />
             ),
             p: ({node, ...props}) => (
-              <p className="mb-6 text-[#9CA3AF] leading-relaxed text-lg" {...props} />
+              <p className="mb-6 text-[#D1D5DB] leading-relaxed text-lg" {...props} />
             ),
             ul: ({node, ...props}) => (
-              <ul className="list-disc list-inside mb-8 space-y-3 text-[#9CA3AF]" {...props} />
+              <ul className="list-disc list-inside mb-8 space-y-3 text-[#D1D5DB]" {...props} />
             ),
             ol: ({node, ...props}) => (
-              <ol className="list-decimal list-inside mb-8 space-y-3 text-[#9CA3AF]" {...props} />
+              <ol className="list-decimal list-inside mb-8 space-y-3 text-[#D1D5DB]" {...props} />
             ),
             li: ({node, ...props}) => (
               <li className="ml-4 leading-relaxed" {...props} />
@@ -184,7 +184,7 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
               <pre className="bg-[#0A1122] border border-[#1E293B] p-6 rounded-2xl overflow-x-auto mb-8 shadow-2xl" {...props} />
             ),
             blockquote: ({node, ...props}) => (
-              <blockquote className="border-l-4 border-[#F59E0B] pl-8 py-4 italic text-[#9CA3AF] mb-8 bg-[#0A1122] rounded-r-2xl" {...props} />
+              <blockquote className="border-l-4 border-[#F59E0B] pl-8 py-4 italic text-[#D1D5DB] mb-8 bg-[#0A1122] rounded-r-2xl" {...props} />
             ),
             a: ({node, ...props}) => (
               <a className="text-[#F59E0B] hover:text-[#D97706] underline transition-colors" {...props} />
@@ -214,7 +214,7 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
           value={notes}
           onChange={(e) => handleNotesChange(e.target.value)}
           placeholder="Jot down your insights..."
-          className="w-full bg-[#0A1122] border border-[#1E293B] rounded-2xl p-6 text-[#F9FAFB] min-h-[180px] focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all placeholder-[#4B5563]"
+          className="w-full bg-[#0A1122] border border-[#1E293B] rounded-2xl p-6 text-[#F9FAFB] min-h-[180px] focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all placeholder-[#9CA3AF]"
         />
       </motion.div>
 
@@ -236,7 +236,7 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
           whileHover={{ scale: 1.05, x: -5 }}
           whileTap={{ scale: 0.95 }}
           onClick={onBack} 
-          className="px-8 py-3 bg-[#161F32] border border-[#1E293B] text-[#9CA3AF] rounded-xl font-bold hover:text-[#F9FAFB] hover:border-[#F59E0B]/50 transition-all"
+          className="px-8 py-3 bg-[#161F32] border border-[#1E293B] text-[#D1D5DB] rounded-xl font-bold hover:text-[#F9FAFB] hover:border-[#F59E0B]/50 transition-all"
         >
           ← Roadmap
         </motion.button>

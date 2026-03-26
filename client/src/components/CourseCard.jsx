@@ -17,9 +17,9 @@ const CourseCard = ({ course }) => {
       className="bg-[#161F32] border border-[#1E293B] rounded-2xl p-6 hover:border-[#F59E0B]/30 transition-all duration-300"
     >
       <h3 className="text-xl font-outfit font-bold mb-2 text-[#F9FAFB]">{course.title}</h3>
-      <p className="text-[#9CA3AF] text-sm mb-6 line-clamp-2 leading-relaxed">{course.description}</p>
+      <p className="text-[#D1D5DB] text-sm mb-6 line-clamp-2 leading-relaxed">{course.description}</p>
       
-      <div className="flex items-center space-x-4 text-sm text-[#9CA3AF] mb-6">
+      <div className="flex items-center space-x-4 text-sm text-[#D1D5DB] mb-6">
         <div className="flex items-center space-x-1.5">
           <Clock size={16} className="text-[#F59E0B]" />
           <span>{course.totalWeeks} weeks</span>
@@ -32,7 +32,7 @@ const CourseCard = ({ course }) => {
 
       <div className="mb-6">
         <div className="flex justify-between text-sm mb-2">
-          <span className="text-[#9CA3AF]">Progress</span>
+          <span className="text-[#D1D5DB]">Progress</span>
           <span className="text-[#F59E0B] font-bold">{course.progress}%</span>
         </div>
         <div className="w-full bg-[#0A1122] rounded-full h-2.5 overflow-hidden">

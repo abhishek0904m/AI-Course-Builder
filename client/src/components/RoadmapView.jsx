@@ -10,7 +10,7 @@ const RoadmapView = ({ modules, onTopicClick }) => {
       case 'in_progress':
         return <Clock className="text-[#F59E0B]" size={24} />;
       default:
-        return <Circle className="text-[#4B5563]" size={24} />;
+        return <Circle className="text-[#9CA3AF]" size={24} />;
     }
   };
 
@@ -48,13 +48,13 @@ const RoadmapView = ({ modules, onTopicClick }) => {
                       
                       <div className="flex-1">
                         <h4 className="font-bold text-xl text-[#F9FAFB] group-hover:text-[#F59E0B] transition-colors">{topic.name}</h4>
-                        <p className="text-[#9CA3AF] text-sm mt-2 leading-relaxed">{topic.description}</p>
+                        <p className="text-[#D1D5DB] text-sm mt-2 leading-relaxed">{topic.description}</p>
                         
                         <div className="flex items-center space-x-4 mt-4 text-xs font-bold uppercase tracking-widest">
                           <span className="px-3 py-1 bg-[#0A1122] rounded-lg text-[#F59E0B] border border-[#1E293B]">
                             {topic.difficulty}
                           </span>
-                          <span className="text-[#4B5563] flex items-center">
+                          <span className="text-[#9CA3AF] flex items-center">
                             <Clock size={14} className="mr-1" /> {topic.estimatedHours} Hours
                           </span>
                         </div>

@@ -33,7 +33,7 @@ const LandingPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-xl text-[#9CA3AF] mb-10 max-w-2xl mx-auto leading-relaxed"
+          className="text-xl text-[#D1D5DB] mb-10 max-w-2xl mx-auto leading-relaxed"
         >
           Generate comprehensive learning roadmaps, deep-dive into concepts with multi-model AI, and track your expertise journey.
         </motion.p>
@@ -72,7 +72,7 @@ const LandingPage = () => {
                   <feature.icon className="text-[#F59E0B]" size={28} />
                 </motion.div>
                 <h3 className="text-xl font-bold mb-3 text-[#F9FAFB]">{feature.title}</h3>
-                <p className="text-[#9CA3AF] leading-relaxed">{feature.desc}</p>
+                <p className="text-[#D1D5DB] leading-relaxed">{feature.desc}</p>
               </div>
             </RevealOnScroll>
           ))}
@@ -103,7 +103,7 @@ const LandingPage = () => {
                     {item.step}
                   </motion.div>
                   <h3 className="text-xl font-outfit font-semibold mb-3 text-[#F9FAFB]">{item.title}</h3>
-                  <p className="text-[#9CA3AF]">{item.desc}</p>
+                  <p className="text-[#D1D5DB]">{item.desc}</p>
                 </div>
               </RevealOnScroll>
             ))}
@@ -113,7 +113,7 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className="border-t border-[#1E293B] mt-20">
-        <div className="max-w-7xl mx-auto px-4 py-12 text-center text-[#9CA3AF]">
+        <div className="max-w-7xl mx-auto px-4 py-12 text-center text-[#D1D5DB]">
           <p className="text-2xl font-outfit font-bold bg-gradient-to-r from-[#F59E0B] to-[#D97706] bg-clip-text text-transparent mb-4">
             AI Course Builder
           </p>

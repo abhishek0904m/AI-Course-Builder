@@ -42,23 +42,23 @@ const Login = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Email</label>
+            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#9CA3AF]"
               placeholder="your@email.com"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Password</label>
+            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#9CA3AF]"
               placeholder="••••••••"
             />
           </div>
@@ -78,7 +78,7 @@ const Login = () => {
           </Link>
         </div>
 
-        <div className="mt-4 text-center text-[#9CA3AF]">
+        <div className="mt-4 text-center text-[#D1D5DB]">
           New here?{' '}
           <Link to="/register" className="text-[#F59E0B] hover:text-[#D97706] font-medium hover:underline">
             Create an Account

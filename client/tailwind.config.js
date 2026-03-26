@@ -14,7 +14,7 @@ export default {
         'accent-hover': '#D97706',
         'accent-secondary': '#10B981',
         'text-primary': '#F9FAFB',
-        'text-secondary': '#9CA3AF',
+        'text-secondary': '#D1D5DB',
         'border': '#1E293B',
       },
       fontFamily: {

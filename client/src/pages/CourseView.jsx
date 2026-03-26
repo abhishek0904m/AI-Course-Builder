@@ -85,7 +85,7 @@ const CourseView = () => {
       >
         <button
           onClick={() => navigate('/dashboard')}
-          className="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#F59E0B] transition-all mb-8 group"
+          className="flex items-center space-x-2 text-[#D1D5DB] hover:text-[#F59E0B] transition-all mb-8 group"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           <span className="font-bold uppercase tracking-widest text-xs">Return to Hall</span>
@@ -95,13 +95,13 @@ const CourseView = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#F59E0B]/5 blur-[100px] rounded-full -mr-32 -mt-32" />
           
           <h1 className="text-4xl font-outfit font-black mb-4 text-[#F9FAFB] leading-tight">{course.title}</h1>
-          <p className="text-[#9CA3AF] text-xl mb-8 leading-relaxed max-w-4xl">{course.description}</p>
+          <p className="text-[#D1D5DB] text-xl mb-8 leading-relaxed max-w-4xl">{course.description}</p>
           
           <div className="flex flex-wrap items-center gap-6">
             <span className="px-4 py-1.5 bg-[#F59E0B] text-[#0A1122] rounded-full font-black text-sm uppercase tracking-tighter shadow-lg">
               {course.level}
             </span>
-            <div className="flex items-center space-x-2 text-[#4B5563] font-bold text-sm">
+            <div className="flex items-center space-x-2 text-[#9CA3AF] font-bold text-sm">
               <Clock size={18} className="text-[#F59E0B]" />
               <span>{course.totalWeeks} WEEKS</span>
             </div>
