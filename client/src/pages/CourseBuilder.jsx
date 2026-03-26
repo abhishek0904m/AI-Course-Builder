@@ -59,53 +59,58 @@ const CourseBuilder = () => {
     <div className="max-w-3xl mx-auto px-4 py-12 relative">
       <FloatingParticles count={15} />
       <RevealOnScroll direction="scale">
-        <div className="bg-white rounded-2xl shadow-md p-8">
+        <div className="bg-[#161F32] border border-[#1E293B] rounded-3xl shadow-2xl p-10 backdrop-blur-xl">
           <RevealOnScroll direction="down" delay={0.2}>
-            <div className="flex items-center space-x-3 mb-6">
-              <Sparkles className="text-indigo-600" size={32} />
-              <h1 className="text-3xl font-outfit font-bold">Build Your Learning Path</h1>
+            <div className="flex items-center space-x-4 mb-10">
+              <div className="w-14 h-14 bg-[#F59E0B]/10 rounded-2xl flex items-center justify-center">
+                <Sparkles className="text-[#F59E0B]" size={32} />
+              </div>
+              <div>
+                <h1 className="text-3xl font-outfit font-bold text-[#F9FAFB]">Forge Learning Path</h1>
+                <p className="text-[#9CA3AF]">Let AI architect your mastery journey</p>
+              </div>
             </div>
           </RevealOnScroll>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <RevealOnScroll direction="left" delay={0.3}>
               <div>
-                <label className="block text-lg font-medium mb-2">What do you want to learn?</label>
+                <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">What is your destination?</label>
                 <input
                   type="text"
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
-                  placeholder="e.g., Machine Learning, Web Development, Python"
-                  className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-accent text-lg"
+                  placeholder="e.g., Quantum Computing, Neural Networks, Advanced UI Design"
+                  className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB] placeholder-[#4B5563] transition-all"
                   required
                 />
               </div>
             </RevealOnScroll>
 
             <RevealOnScroll direction="right" delay={0.4}>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-lg font-medium mb-2">Hours per day</label>
+                  <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">Intensity (Hrs/Day)</label>
                   <input
                     type="number"
                     value={hoursPerDay}
                     onChange={(e) => setHoursPerDay(Number(e.target.value))}
                     min="1"
                     max="12"
-                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-accent text-lg"
+                    className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB]"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-lg font-medium mb-2">Total weeks</label>
+                  <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">Duration (Weeks)</label>
                   <input
                     type="number"
                     value={totalWeeks}
                     onChange={(e) => setTotalWeeks(Number(e.target.value))}
                     min="1"
                     max="52"
-                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-accent text-lg"
+                    className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB]"
                     required
                   />
                 </div>
@@ -114,7 +119,7 @@ const CourseBuilder = () => {
 
             <RevealOnScroll direction="up" delay={0.5}>
               <div>
-                <label className="block text-lg font-medium mb-2">Skill Level</label>
+                <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">Mastery Level</label>
                 <div className="grid grid-cols-3 gap-4">
                   {['beginner', 'intermediate', 'advanced'].map(lvl => (
                     <motion.button
@@ -123,10 +128,10 @@ const CourseBuilder = () => {
                       onClick={() => setLevel(lvl)}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`py-3 rounded-lg font-semibold transition ${
+                      className={`py-4 rounded-xl font-bold transition-all duration-300 ${
                         level === lvl
-                          ? 'bg-accent text-bg-primary'
-                          : 'bg-white border border-gray-200 hover:border-accent'
+                          ? 'bg-[#F59E0B] text-[#0A1122] shadow-[0_0_20px_rgba(245,158,11,0.2)]'
+                          : 'bg-[#0A1122] text-[#9CA3AF] border border-[#1E293B] hover:border-[#F59E0B]/50'
                       }`}
                     >
                       {lvl.charAt(0).toUpperCase() + lvl.slice(1)}
@@ -138,12 +143,12 @@ const CourseBuilder = () => {
 
             <RevealOnScroll direction="left" delay={0.6}>
               <div>
-                <label className="block text-lg font-medium mb-2">What's your goal?</label>
+                <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">What is your primary goal?</label>
                 <textarea
                   value={goal}
                   onChange={(e) => setGoal(e.target.value)}
-                  placeholder="e.g., Get a job as a developer, Build a personal project, Pass a certification"
-                  className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-accent text-lg min-h-[100px]"
+                  placeholder="e.g., Become a Senior Architect, Build a billion-dollar startup core, Master the fundamentals"
+                  className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB] placeholder-[#4B5563] min-h-[120px]"
                   required
                 />
               </div>
@@ -153,17 +158,17 @@ const CourseBuilder = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="btn-primary w-full text-lg py-4 disabled:opacity-50 flex items-center justify-center space-x-2"
+                className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] text-xl py-5 rounded-2xl font-black transition-all duration-500 shadow-[0_0_30px_rgba(245,158,11,0.2)] hover:shadow-[0_0_50px_rgba(245,158,11,0.4)] disabled:opacity-50 flex items-center justify-center space-x-3 group"
               >
                 {loading ? (
                   <div className="flex items-center space-x-3">
                     <SmoothLoader size="sm" />
-                    <span>Generating Your Roadmap...</span>
+                    <span className="animate-pulse">Architecting Your Journey...</span>
                   </div>
                 ) : (
                   <>
-                    <Sparkles size={24} />
-                    <span>Generate Roadmap</span>
+                    <Sparkles size={28} className="group-hover:rotate-12 transition-transform" />
+                    <span>GENERATE PATH</span>
                   </>
                 )}
               </button>

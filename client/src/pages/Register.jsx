@@ -53,52 +53,52 @@ const Register = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <RevealOnScroll direction="scale">
-        <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
-        <h2 className="text-3xl font-outfit font-bold text-center mb-6 text-gray-900">
-          Create Your <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Account</span>
+        <div className="bg-[#161F32] border border-[#1E293B] rounded-2xl shadow-2xl p-8 w-full max-w-md backdrop-blur-xl">
+        <h2 className="text-3xl font-outfit font-bold text-center mb-8 text-[#F9FAFB]">
+          Join the <span className="text-[#F59E0B]">Elite</span>
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2 text-gray-700">Full Name</label>
+            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Full Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-900"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
               placeholder="John Doe"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-gray-700">Email</label>
+            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-900"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
               placeholder="your@email.com"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-gray-700">Password</label>
+            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-900"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
               placeholder="••••••••"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-gray-700">Confirm Password</label>
+            <label className="block text-sm font-medium mb-2 text-[#9CA3AF]">Confirm Password</label>
             <input
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-900"
+              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#4B5563]"
               placeholder="••••••••"
             />
           </div>
@@ -106,15 +106,15 @@ const Register = () => {
           <button
             type="submit"
             disabled={loading}
-            className="btn-primary w-full disabled:opacity-50"
+            className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] py-4 rounded-xl font-bold transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.2)] disabled:opacity-50"
           >
-            {loading ? 'Creating Account...' : 'Sign Up'}
+            {loading ? 'Forging Profile...' : 'Sign Up'}
           </button>
         </form>
 
-        <div className="mt-6 text-center text-gray-600">
-          Already have an account?{' '}
-          <Link to="/login" className="text-indigo-600 hover:underline font-medium">
+        <div className="mt-8 text-center text-[#9CA3AF]">
+          Already an initiate?{' '}
+          <Link to="/login" className="text-[#F59E0B] hover:text-[#D97706] font-medium hover:underline">
             Login
           </Link>
         </div>

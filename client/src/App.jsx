@@ -18,8 +18,8 @@ function App() {
     <AuthProvider>
       <Router>
         <ScrollProgress />
-        <AnimatedBackground />
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-indigo-50 text-gray-900 relative">
+        <div className="min-h-screen bg-[#0A1122] text-[#F9FAFB] relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A1122] via-[#111827] to-[#0A1122] opacity-80 pointer-events-none" />
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />

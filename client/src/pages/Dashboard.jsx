@@ -68,11 +68,11 @@ const Dashboard = () => {
       <FloatingParticles count={30} />
       {/* Welcome Banner */}
       <RevealOnScroll direction="down">
-        <div className="glass-card p-6 mb-8">
-          <h1 className="text-3xl font-outfit font-bold mb-2 text-gray-900">
-            Welcome back, <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">{user?.name}</span>
+        <div className="bg-[#161F32] border border-[#1E293B] p-8 rounded-2xl mb-8 shadow-2xl backdrop-blur-xl">
+          <h1 className="text-3xl font-outfit font-bold mb-2 text-[#F9FAFB]">
+            Welcome back, <span className="bg-gradient-to-r from-[#F59E0B] to-[#D97706] bg-clip-text text-transparent">{user?.name}</span>
           </h1>
-          <p className="text-gray-600">Continue your learning journey</p>
+          <p className="text-[#9CA3AF]">Continue your elite learning journey</p>
         </div>
       </RevealOnScroll>
 
@@ -85,12 +85,12 @@ const Dashboard = () => {
           { icon: Flame, label: 'Streak', value: `${stats.streak}d`, color: 'from-red-500 to-pink-500' }
         ].map((stat, idx) => (
           <RevealOnScroll key={idx} direction="scale" delay={idx * 0.1}>
-            <div className="glass-card p-6 text-center">
-              <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3`}>
+            <div className="bg-[#161F32] border border-[#1E293B] p-6 rounded-2xl text-center hover:border-[#F59E0B]/30 transition-all duration-300 group">
+              <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
                 <stat.icon className="text-white" size={20} />
               </div>
-              <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-              <p className="text-gray-600 text-sm">{stat.label}</p>
+              <p className="text-2xl font-bold text-[#F9FAFB]">{stat.value}</p>
+              <p className="text-[#9CA3AF] text-sm uppercase tracking-wider font-semibold">{stat.label}</p>
             </div>
           </RevealOnScroll>
         ))}
@@ -98,21 +98,21 @@ const Dashboard = () => {
 
       {/* Quick Actions */}
       <RevealOnScroll direction="up">
-        <div className="glass-card p-6 mb-8">
-          <div className="flex space-x-4">
+        <div className="bg-[#161F32] border border-[#1E293B] p-6 rounded-2xl mb-8">
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#4B5563]" size={20} />
               <input
                 type="text"
                 placeholder="Search courses..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900"
+                className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-[#F9FAFB] placeholder-[#4B5563]"
               />
             </div>
-            <Link to="/build" className="btn-primary flex items-center space-x-2">
+            <Link to="/build" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] px-8 py-3 rounded-xl font-bold flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg">
               <Plus size={20} />
-              <span>New Course</span>
+              <span>Create New Course</span>
             </Link>
           </div>
         </div>
@@ -121,16 +121,18 @@ const Dashboard = () => {
       {/* My Courses */}
       <div className="mb-8">
         <RevealOnScroll direction="right">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-3xl font-outfit font-bold">My Courses</h2>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+            <h2 className="text-3xl font-outfit font-bold text-[#F9FAFB]">My Courses</h2>
             
-            <div className="flex space-x-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {['all', 'in_progress', 'completed', 'not_started'].map(f => (
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`px-4 py-2 rounded-lg transition ${
-                    filter === f ? 'bg-accent text-bg-primary' : 'bg-white text-gray-600 hover:bg-white-hover'
+                  className={`px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 ${
+                    filter === f 
+                      ? 'bg-[#F59E0B] text-[#0A1122] shadow-[0_0_20px_rgba(245,158,11,0.2)]' 
+                      : 'bg-[#161F32] text-[#9CA3AF] border border-[#1E293B] hover:border-[#F59E0B]/50'
                   }`}
                 >
                   {f.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}
@@ -142,10 +144,13 @@ const Dashboard = () => {
 
         {filteredCourses.length === 0 ? (
           <RevealOnScroll direction="scale">
-            <div className="bg-white rounded-2xl shadow-md p-12 text-center">
-              <p className="text-gray-600 text-lg mb-4">No courses yet. Start your learning journey!</p>
-              <Link to="/build" className="btn-primary inline-block">
-                Create Your First Course
+            <div className="bg-[#161F32] border border-[#1E293B] rounded-2xl p-16 text-center border-dashed">
+              <div className="w-20 h-20 bg-[#0A1122] rounded-full flex items-center justify-center mx-auto mb-6">
+                 <Plus className="text-[#F59E0B]" size={32} />
+              </div>
+              <p className="text-[#9CA3AF] text-xl mb-8">Your journey is waiting to begin.</p>
+              <Link to="/build" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg">
+                Forge Your First Path
               </Link>
             </div>
           </RevealOnScroll>

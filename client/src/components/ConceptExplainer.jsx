@@ -118,9 +118,9 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.5 }}
           >
-            <BookOpen className="text-indigo-600" size={32} />
+            <BookOpen className="text-[#F59E0B]" size={32} />
           </motion.div>
-          <h2 className="text-4xl font-outfit font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
+          <h2 className="text-4xl font-outfit font-bold bg-gradient-to-r from-[#F59E0B] to-[#D97706] bg-clip-text text-transparent">
             {topic.name}
           </h2>
         </div>
@@ -128,7 +128,7 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={toggleBookmark} 
-          className="text-indigo-600 hover:text-indigo-600-hover transition-colors"
+          className="text-[#F59E0B] hover:text-[#D97706] transition-colors"
         >
           <Star size={28} fill={bookmarked ? 'currentColor' : 'none'} />
         </motion.button>
@@ -138,7 +138,7 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="markdown-content mb-8 p-8 bg-white rounded-2xl shadow-sm"
+        className="markdown-content mb-8 p-10 bg-[#161F32] border border-[#1E293B] rounded-3xl shadow-2xl"
       >
         <ReactMarkdown 
           remarkPlugins={[remarkGfm]}
@@ -147,7 +147,7 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
               <motion.h1 
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl font-bold mb-6 text-gray-900 border-b-2 border-accent pb-3" 
+                className="text-4xl font-bold mb-8 text-[#F9FAFB] border-b border-[#1E293B] pb-4" 
                 {...props} 
               />
             ),
@@ -155,40 +155,42 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
               <motion.h2 
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="text-3xl font-semibold mb-4 mt-8 text-gray-800" 
+                className="text-3xl font-bold mb-6 mt-10 text-[#F9FAFB] flex items-center" 
                 {...props} 
               />
             ),
             h3: ({node, ...props}) => (
-              <h3 className="text-2xl font-semibold mb-3 mt-6 text-gray-700" {...props} />
+              <h3 className="text-2xl font-bold mb-4 mt-8 text-[#F9FAFB]" {...props} />
             ),
             p: ({node, ...props}) => (
-              <p className="mb-4 text-gray-600 leading-relaxed text-lg" {...props} />
+              <p className="mb-6 text-[#9CA3AF] leading-relaxed text-lg" {...props} />
             ),
             ul: ({node, ...props}) => (
-              <ul className="list-disc list-inside mb-6 space-y-2 text-gray-600" {...props} />
+              <ul className="list-disc list-inside mb-8 space-y-3 text-[#9CA3AF]" {...props} />
             ),
             ol: ({node, ...props}) => (
-              <ol className="list-decimal list-inside mb-6 space-y-2 text-gray-600" {...props} />
+              <ol className="list-decimal list-inside mb-8 space-y-3 text-[#9CA3AF]" {...props} />
             ),
             li: ({node, ...props}) => (
               <li className="ml-4 leading-relaxed" {...props} />
             ),
             code: ({node, inline, ...props}) => 
               inline 
-                ? <code className="bg-indigo-50 px-2 py-1 rounded text-indigo-600 font-mono text-sm" {...props} />
-                : <code className="block bg-gradient-to-br from-gray-600 to-gray-500 text-white p-6 rounded-xl overflow-x-auto font-mono text-sm mb-6 shadow-inner" {...props} />,
+                ? <code className="bg-[#0A1122] px-2 py-1 rounded text-[#F59E0B] font-mono text-sm border border-[#1E293B]" {...props} />
+                : <div className="relative group my-8">
+                    <pre className="bg-[#0A1122] border border-[#1E293B] p-6 rounded-2xl overflow-x-auto font-mono text-sm shadow-inner" {...props} />
+                  </div>,
             pre: ({node, ...props}) => (
-              <pre className="bg-gradient-to-br from-gray-600 to-gray-500 p-6 rounded-xl overflow-x-auto mb-6 shadow-lg" {...props} />
+              <pre className="bg-[#0A1122] border border-[#1E293B] p-6 rounded-2xl overflow-x-auto mb-8 shadow-2xl" {...props} />
             ),
             blockquote: ({node, ...props}) => (
-              <blockquote className="border-l-4 border-accent pl-6 py-2 italic text-gray-600 mb-6 bg-indigo-50 rounded-r-lg" {...props} />
+              <blockquote className="border-l-4 border-[#F59E0B] pl-8 py-4 italic text-[#9CA3AF] mb-8 bg-[#0A1122] rounded-r-2xl" {...props} />
             ),
             a: ({node, ...props}) => (
-              <a className="text-indigo-600 hover:text-indigo-600-hover underline transition-colors" {...props} />
+              <a className="text-[#F59E0B] hover:text-[#D97706] underline transition-colors" {...props} />
             ),
             strong: ({node, ...props}) => (
-              <strong className="font-semibold text-gray-900" {...props} />
+              <strong className="font-bold text-[#F9FAFB]" {...props} />
             ),
             hr: ({node, ...props}) => (
               <hr className="border-gray-200 my-8" {...props} />
@@ -203,16 +205,16 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="bg-white rounded-2xl shadow-sm p-6 mb-8"
+        className="bg-[#161F32] border border-[#1E293B] rounded-3xl shadow-2xl p-8 mb-8"
       >
-        <h3 className="text-2xl font-outfit font-semibold mb-4 text-gray-800 flex items-center">
-          <span className="mr-2">📝</span> My Notes
+        <h3 className="text-2xl font-outfit font-bold mb-6 text-[#F9FAFB] flex items-center">
+          <span className="mr-3">📝</span> Personal Codex
         </h3>
         <textarea
           value={notes}
           onChange={(e) => handleNotesChange(e.target.value)}
-          placeholder="Write your notes here..."
-          className="w-full bg-gray-50 border border-gray-200 rounded-xl p-4 text-gray-700 min-h-[150px] focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+          placeholder="Jot down your insights..."
+          className="w-full bg-[#0A1122] border border-[#1E293B] rounded-2xl p-6 text-[#F9FAFB] min-h-[180px] focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all placeholder-[#4B5563]"
         />
       </motion.div>
 
@@ -234,26 +236,26 @@ const ConceptExplainer = ({ course, topic, onBack, onNext, onUpdate }) => {
           whileHover={{ scale: 1.05, x: -5 }}
           whileTap={{ scale: 0.95 }}
           onClick={onBack} 
-          className="btn-secondary"
+          className="px-8 py-3 bg-[#161F32] border border-[#1E293B] text-[#9CA3AF] rounded-xl font-bold hover:text-[#F9FAFB] hover:border-[#F59E0B]/50 transition-all"
         >
-          ← Back to Roadmap
+          ← Roadmap
         </motion.button>
         <div className="space-x-4">
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowQuiz(true)} 
-            className="btn-primary"
+            className="px-8 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] rounded-xl font-bold shadow-lg transition-all"
           >
-            Take Quiz →
+            Initiate Quiz →
           </motion.button>
           <motion.button 
             whileHover={{ scale: 1.05, x: 5 }}
             whileTap={{ scale: 0.95 }}
             onClick={onNext} 
-            className="btn-secondary"
+            className="px-8 py-3 bg-[#161F32] border border-[#1E293B] text-[#F59E0B] rounded-xl font-bold hover:bg-[#F59E0B]/5 hover:border-[#F59E0B] transition-all"
           >
-            Next Concept →
+            Advance →
           </motion.button>
         </div>
       </motion.div>

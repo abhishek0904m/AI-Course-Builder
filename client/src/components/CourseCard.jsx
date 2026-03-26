@@ -14,37 +14,37 @@ const CourseCard = ({ course }) => {
         rotateY: 2,
         transition: { duration: 0.3 }
       }}
-      className="bg-white rounded-2xl shadow-md p-6 card-3d"
+      className="bg-[#161F32] border border-[#1E293B] rounded-2xl p-6 hover:border-[#F59E0B]/30 transition-all duration-300"
     >
-      <h3 className="text-xl font-outfit font-semibold mb-2">{course.title}</h3>
-      <p className="text-gray-600 text-sm mb-4 line-clamp-2">{course.description}</p>
+      <h3 className="text-xl font-outfit font-bold mb-2 text-[#F9FAFB]">{course.title}</h3>
+      <p className="text-[#9CA3AF] text-sm mb-6 line-clamp-2 leading-relaxed">{course.description}</p>
       
-      <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
-        <div className="flex items-center space-x-1">
-          <Clock size={16} />
+      <div className="flex items-center space-x-4 text-sm text-[#9CA3AF] mb-6">
+        <div className="flex items-center space-x-1.5">
+          <Clock size={16} className="text-[#F59E0B]" />
           <span>{course.totalWeeks} weeks</span>
         </div>
-        <div className="flex items-center space-x-1">
-          <TrendingUp size={16} />
+        <div className="flex items-center space-x-1.5">
+          <TrendingUp size={16} className="text-[#F59E0B]" />
           <span className="capitalize">{course.level}</span>
         </div>
       </div>
 
-      <div className="mb-4">
-        <div className="flex justify-between text-sm mb-1">
-          <span className="text-gray-600">Progress</span>
-          <span className="text-indigo-600 font-semibold">{course.progress}%</span>
+      <div className="mb-6">
+        <div className="flex justify-between text-sm mb-2">
+          <span className="text-[#9CA3AF]">Progress</span>
+          <span className="text-[#F59E0B] font-bold">{course.progress}%</span>
         </div>
-        <div className="w-full bg-border rounded-full h-2">
+        <div className="w-full bg-[#0A1122] rounded-full h-2.5 overflow-hidden">
           <div 
-            className="bg-accent h-2 rounded-full transition-all duration-300"
+            className="bg-gradient-to-r from-[#F59E0B] to-[#D97706] h-full rounded-full transition-all duration-1000 ease-out"
             style={{ width: `${course.progress}%` }}
           />
         </div>
       </div>
 
-      <Link to={`/course/${course._id}`} className="btn-primary w-full block text-center">
-        Continue Learning
+      <Link to={`/course/${course._id}`} className="w-full block bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] py-3 rounded-xl font-bold transition-all duration-300 text-center shadow-lg">
+        Open Course
       </Link>
     </motion.div>
   );

@@ -5,30 +5,28 @@ const AnimatedBackground = () => {
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
       {/* Subtle gradient orbs */}
       <motion.div
-        className="absolute w-96 h-96 rounded-full bg-gradient-to-br from-blue-100/30 to-indigo-100/30 blur-3xl"
-        style={{ top: '10%', left: '10%' }}
+        className="absolute w-[500px] h-[500px] rounded-full bg-[#F59E0B]/5 blur-[120px]"
+        style={{ top: '-10%', left: '-10%' }}
         animate={{
-          scale: [1, 1.1, 1],
-          x: [0, 30, 0],
-          y: [0, 20, 0],
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3],
         }}
         transition={{
-          duration: 25,
+          duration: 15,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
       />
       
       <motion.div
-        className="absolute w-80 h-80 rounded-full bg-gradient-to-br from-slate-100/20 to-blue-100/20 blur-3xl"
-        style={{ top: '60%', right: '10%' }}
+        className="absolute w-[400px] h-[400px] rounded-full bg-[#6366F1]/5 blur-[100px]"
+        style={{ bottom: '10%', right: '10%' }}
         animate={{
-          scale: [1, 1.2, 1],
-          x: [0, -25, 0],
-          y: [0, -30, 0],
+          scale: [1, 1.3, 1],
+          opacity: [0.2, 0.4, 0.2],
         }}
         transition={{
-          duration: 30,
+          duration: 20,
           repeat: Infinity,
           ease: 'easeInOut',
         }}

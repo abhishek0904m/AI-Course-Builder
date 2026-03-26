@@ -85,23 +85,30 @@ const CourseView = () => {
       >
         <button
           onClick={() => navigate('/dashboard')}
-          className="flex items-center space-x-2 text-gray-600 hover:text-indigo-600 transition mb-6"
+          className="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#F59E0B] transition-all mb-8 group"
         >
-          <ArrowLeft size={20} />
-          <span>Back to Dashboard</span>
+          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+          <span className="font-bold uppercase tracking-widest text-xs">Return to Hall</span>
         </button>
 
-        <div className="bg-white rounded-2xl shadow-md p-8 mb-8">
-          <h1 className="text-4xl font-outfit font-bold mb-2">{course.title}</h1>
-          <p className="text-gray-600 text-lg mb-4">{course.description}</p>
+        <div className="bg-[#161F32] border border-[#1E293B] rounded-3xl p-10 mb-10 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#F59E0B]/5 blur-[100px] rounded-full -mr-32 -mt-32" />
           
-          <div className="flex items-center space-x-6 text-sm">
-            <span className="px-3 py-1 bg-accent text-bg-primary rounded-full font-semibold">
+          <h1 className="text-4xl font-outfit font-black mb-4 text-[#F9FAFB] leading-tight">{course.title}</h1>
+          <p className="text-[#9CA3AF] text-xl mb-8 leading-relaxed max-w-4xl">{course.description}</p>
+          
+          <div className="flex flex-wrap items-center gap-6">
+            <span className="px-4 py-1.5 bg-[#F59E0B] text-[#0A1122] rounded-full font-black text-sm uppercase tracking-tighter shadow-lg">
               {course.level}
             </span>
-            <span className="text-gray-600">{course.totalWeeks} weeks</span>
-            <span className="text-gray-600">{course.hoursPerDay}h/day</span>
-            <span className="text-indigo-600 font-semibold">{course.progress}% Complete</span>
+            <div className="flex items-center space-x-2 text-[#4B5563] font-bold text-sm">
+              <Clock size={18} className="text-[#F59E0B]" />
+              <span>{course.totalWeeks} WEEKS</span>
+            </div>
+            <div className="h-4 w-[1px] bg-[#1E293B]" />
+            <div className="flex items-center space-x-2 text-[#F59E0B] font-black text-sm">
+              <span>{course.progress}% ASCENDED</span>
+            </div>
           </div>
         </div>
 

@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #F8F9FA;
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #F1F3F5;
-  --accent: #6366F1;
-  --accent-hover: #4F46E5;
-  --accent-secondary: #10B981;
-  --text-primary: #1F2937;
-  --text-secondary: #6B7280;
-  --border: #E5E7EB;
-  --error: #EF4444;
-  --success: #10B981;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --bg-primary: #0A1122;
+  --bg-card: #161F32;
+  --bg-card-hover: #1E293B;
+  --accent: #F59E0B;
+  --accent-hover: #D97706;
+  --accent-secondary: #34D399;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --border: #1E293B;
+  --error: #FB7185;
+  --success: #34D399;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --gradient-primary: linear-gradient(135deg, #161F32 0%, #0A1122 100%);
+  --gradient-accent: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
 }
 
 * {

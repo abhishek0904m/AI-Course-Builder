@@ -41,8 +41,8 @@ const YouTubeReferences = ({ course, topic }) => {
 
   if (loading) {
     return (
-      <div className="bg-white rounded-2xl shadow-md p-6">
-        <div className="flex items-center justify-center py-8">
+      <div className="bg-[#161F32] border border-[#1E293B] rounded-3xl p-8 shadow-2xl">
+        <div className="flex items-center justify-center py-12">
           <SmoothLoader size="md" />
         </div>
       </div>
@@ -50,11 +50,13 @@ const YouTubeReferences = ({ course, topic }) => {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-6">
+    <div className="bg-[#161F32] border border-[#1E293B] rounded-3xl p-8 shadow-2xl">
       <RevealOnScroll direction="down">
-        <div className="flex items-center space-x-2 mb-4">
-          <Youtube className="text-indigo-600" size={24} />
-          <h3 className="text-xl font-outfit font-semibold">Watch & Learn</h3>
+        <div className="flex items-center space-x-3 mb-8">
+          <div className="w-10 h-10 bg-[#FF0000]/10 rounded-xl flex items-center justify-center">
+            <Youtube className="text-[#FF0000]" size={24} />
+          </div>
+          <h3 className="text-xl font-outfit font-bold text-[#F9FAFB]">Sustenance Rituals</h3>
         </div>
       </RevealOnScroll>
 
@@ -66,12 +68,12 @@ const YouTubeReferences = ({ course, topic }) => {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-white-hover rounded-lg overflow-hidden transition block card-3d"
+              className="bg-[#0A1122] border border-[#1E293B] rounded-2xl overflow-hidden transition-all duration-300 block hover:border-[#F59E0B]/30"
             >
               <img src={video.thumbnail} alt={video.title} className="w-full aspect-video object-cover" />
-              <div className="p-3">
-                <h4 className="font-semibold text-sm line-clamp-2 mb-1">{video.title}</h4>
-                <p className="text-gray-600 text-xs">{video.channelTitle}</p>
+              <div className="p-4">
+                <h4 className="font-bold text-sm text-[#F9FAFB] line-clamp-2 mb-2 leading-relaxed">{video.title}</h4>
+                <p className="text-[#4B5563] text-xs font-semibold">{video.channelTitle}</p>
               </div>
             </motion.a>
           </RevealOnScroll>
