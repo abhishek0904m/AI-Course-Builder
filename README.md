@@ -1,5 +1,7 @@
 # 🎓 AI Course Builder - MERN Stack
 
+**🌐 Live Demo: [ai-course-builder-bxxs.onrender.com](https://ai-course-builder-bxxs.onrender.com/)**
+
 A complete, production-ready AI-Powered Course Builder web application using the MERN stack (MongoDB, Express.js, React.js, Node.js) with a Multi-Model AI approach using Google Gemini 1.5 Pro + Groq (Llama 3.1 8B).
 
 ## ✨ Features
@@ -152,8 +154,9 @@ npm run dev
 ```
 
 The application will be available at:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:5000
+- **Live Demo**: [https://ai-course-builder-bxxs.onrender.com/](https://ai-course-builder-bxxs.onrender.com/)
+- Frontend (Local): http://localhost:3000
+- Backend (Local): http://localhost:5000
 
 ## 📖 Usage Guide
 
