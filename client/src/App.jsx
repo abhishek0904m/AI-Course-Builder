@@ -18,8 +18,9 @@ function App() {
     <AuthProvider>
       <Router>
         <ScrollProgress />
-        <div className="min-h-screen bg-[#0A1122] text-[#F9FAFB] relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0A1122] via-[#111827] to-[#0A1122] opacity-80 pointer-events-none" />
+        <div className="min-h-screen bg-white text-[#0F172A] relative overflow-hidden">
+          {/* AnimatedBackground is kept as it's not explicitly a "dark gradient overlay" and might be a visual effect */}
+          <AnimatedBackground />
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -63,10 +64,10 @@ function App() {
             position="top-right"
             toastOptions={{
               style: {
-                background: '#FFFFFF',
-                color: '#1F2937',
-                border: '1px solid #E5E7EB',
-                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                background: '#FFFFFF', // Light theme background
+                color: '#1F2937',     // Darker text for light theme
+                border: '1px solid #E5E7EB', // Light border
+                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', // Subtle shadow
               },
               success: {
                 iconTheme: {

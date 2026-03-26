@@ -92,22 +92,22 @@ const QuizSection = ({ course, topic, onBack, onComplete, onUpdate }) => {
         animate={{ opacity: 1 }}
         className="max-w-3xl mx-auto"
       >
-        <div className="bg-[#161F32] border border-[#1E293B] rounded-3xl shadow-2xl p-10 text-center">
+        <div className="bg-white border border-[#E2E8F0] rounded-3xl shadow-xl p-10 text-center">
           <div className={`text-7xl mb-6 ${passed ? 'drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]' : 'drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]'}`}>
             {passed ? '🏆' : '🕯️'}
           </div>
-          <h2 className="text-3xl font-outfit font-bold mb-4 text-[#F9FAFB]">
+          <h2 className="text-3xl font-outfit font-bold mb-4 text-[#0F172A]">
             {passed ? 'Codex Unified' : 'Focus Required'}
           </h2>
-          <p className="text-2xl mb-10 text-[#9CA3AF]">
+          <p className="text-2xl mb-10 text-[#475569]">
             Mastery: <span className="text-[#F59E0B] font-black">{score}/{quiz.questions.length}</span>
             {' '}({percentage.toFixed(0)}%)
           </p>
 
           <div className="space-y-6 text-left mb-10">
             {quiz.questions.map((q, idx) => (
-              <div key={idx} className="bg-[#0A1122] border border-[#1E293B] p-6 rounded-2xl">
-                <p className="font-bold text-[#F9FAFB] mb-4">{idx + 1}. {q.question}</p>
+              <div key={idx} className="bg-[#F8FAFC] border border-[#E2E8F0] p-6 rounded-2xl">
+                <p className="font-bold text-[#0F172A] mb-4">{idx + 1}. {q.question}</p>
                 <div className="flex items-center space-x-3 mb-2">
                   {answers[idx] === q.correctAnswer ? (
                     <CheckCircle className="text-[#10B981]" size={20} />
@@ -118,25 +118,25 @@ const QuizSection = ({ course, topic, onBack, onComplete, onUpdate }) => {
                     Identity: {answers[idx] || 'Silence'}
                   </span>
                 </div>
-                <div className="text-[#F59E0B] font-bold text-sm uppercase tracking-widest mt-2 border-t border-[#1E293B] pt-4">
+                <div className="text-[#F59E0B] font-bold text-sm uppercase tracking-widest mt-2 border-t border-[#E2E8F0] pt-4">
                   True Path: {q.correctAnswer}
                 </div>
-                <p className="text-[#9CA3AF] text-sm mt-3 leading-relaxed italic">{q.explanation}</p>
+                <p className="text-[#475569] text-sm mt-3 leading-relaxed italic">{q.explanation}</p>
               </div>
             ))}
           </div>
 
           <div className="flex justify-center space-x-4">
-            <button onClick={onBack} className="px-8 py-3 bg-[#0A1122] text-[#9CA3AF] rounded-xl font-bold hover:text-[#F9FAFB] transition-colors">
+            <button onClick={onBack} className="px-8 py-3 bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] rounded-xl font-bold hover:text-[#0F172A] transition-colors">
               Re-Study
             </button>
             {passed && (
-              <button onClick={onComplete} className="px-8 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] rounded-xl font-bold shadow-lg">
+              <button onClick={onComplete} className="px-8 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-white rounded-xl font-bold shadow-lg">
                 Ascend →
               </button>
             )}
             {!passed && (
-              <button onClick={() => { setSubmitted(false); setAnswers({}); }} className="px-8 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] rounded-xl font-bold shadow-lg">
+              <button onClick={() => { setSubmitted(false); setAnswers({}); }} className="px-8 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-white rounded-xl font-bold shadow-lg">
                 Re-Try
               </button>
             )}
@@ -154,13 +154,13 @@ const QuizSection = ({ course, topic, onBack, onComplete, onUpdate }) => {
       animate={{ opacity: 1 }}
       className="max-w-3xl mx-auto"
     >
-      <div className="bg-[#161F32] border border-[#1E293B] rounded-3xl shadow-2xl p-10">
+      <div className="bg-white border border-[#E2E8F0] rounded-3xl shadow-xl p-10">
         <div className="mb-10">
-          <div className="flex justify-between text-sm text-[#9CA3AF] mb-3 font-bold uppercase tracking-widest">
+          <div className="flex justify-between text-sm text-[#475569] mb-3 font-bold uppercase tracking-widest">
             <span>Ritual {currentQuestion + 1} of {quiz.questions.length}</span>
             <span className="text-[#F59E0B]">{Object.keys(answers).length} Locked</span>
           </div>
-          <div className="w-full bg-[#0A1122] rounded-full h-3 overflow-hidden border border-[#1E293B]">
+          <div className="w-full bg-[#F8FAFC] rounded-full h-3 overflow-hidden border border-[#E2E8F0]">
             <div 
               className="bg-gradient-to-r from-[#F59E0B] to-[#D97706] h-full rounded-full transition-all duration-500 ease-out"
               style={{ width: `${((currentQuestion + 1) / quiz.questions.length) * 100}%` }}
@@ -168,7 +168,7 @@ const QuizSection = ({ course, topic, onBack, onComplete, onUpdate }) => {
           </div>
         </div>
 
-        <h3 className="text-2xl font-outfit font-bold mb-10 text-[#F9FAFB] leading-tight">{question.question}</h3>
+        <h3 className="text-2xl font-outfit font-bold mb-10 text-[#0F172A] leading-tight">{question.question}</h3>
 
         <div className="space-y-4 mb-10">
           {question.options.map((option, idx) => (
@@ -177,13 +177,13 @@ const QuizSection = ({ course, topic, onBack, onComplete, onUpdate }) => {
               onClick={() => handleAnswer(currentQuestion, option.charAt(0))}
               className={`w-full text-left p-6 rounded-2xl border-2 transition-all duration-300 font-semibold text-lg ${
                 answers[currentQuestion] === option.charAt(0)
-                  ? 'border-[#F59E0B] bg-[#F59E0B]/5 text-[#F59E0B] shadow-[0_0_20px_rgba(245,158,11,0.1)]'
-                  : 'border-[#1E293B] hover:border-[#F59E0B]/30 text-[#9CA3AF] bg-[#0A1122]'
+                  ? 'border-[#F59E0B] bg-[#F59E0B]/5 text-[#F59E0B] shadow-[0_0_20px_rgba(245,158,11,0.05)]'
+                  : 'border-[#E2E8F0] hover:border-[#F59E0B]/30 text-[#475569] bg-[#F8FAFC]'
               }`}
             >
               <div className="flex items-center space-x-4">
                 <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs border ${
-                   answers[currentQuestion] === option.charAt(0) ? 'bg-[#F59E0B] text-[#0A1122]' : 'bg-[#161F32] text-[#4B5563]'
+                    answers[currentQuestion] === option.charAt(0) ? 'bg-[#F59E0B] text-white' : 'bg-[#F1F5F9] text-[#64748B]'
                 }`}>
                   {option.charAt(0)}
                 </span>
@@ -193,11 +193,11 @@ const QuizSection = ({ course, topic, onBack, onComplete, onUpdate }) => {
           ))}
         </div>
 
-        <div className="flex justify-between mt-12 pt-8 border-t border-[#1E293B]">
+        <div className="flex justify-between mt-12 pt-8 border-t border-[#E2E8F0]">
           <button
             onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
             disabled={currentQuestion === 0}
-            className="px-8 py-3 bg-[#0A1122] text-[#9CA3AF] rounded-xl font-bold disabled:opacity-30 transition-all font-outfit"
+            className="px-8 py-3 bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] rounded-xl font-bold disabled:opacity-30 transition-all font-outfit"
           >
             ← Previous
           </button>
@@ -205,7 +205,7 @@ const QuizSection = ({ course, topic, onBack, onComplete, onUpdate }) => {
           {currentQuestion < quiz.questions.length - 1 ? (
             <button
               onClick={() => setCurrentQuestion(currentQuestion + 1)}
-              className="px-10 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] rounded-xl font-bold shadow-lg transition-all"
+              className="px-10 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-white rounded-xl font-bold shadow-lg transition-all"
             >
               Continue →
             </button>
@@ -213,7 +213,7 @@ const QuizSection = ({ course, topic, onBack, onComplete, onUpdate }) => {
             <button
               onClick={handleSubmit}
               disabled={Object.keys(answers).length < quiz.questions.length}
-              className="px-10 py-3 bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-[#0A1122] rounded-xl font-black shadow-xl disabled:opacity-50 transition-all"
+              className="px-10 py-3 bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white rounded-xl font-black shadow-xl disabled:opacity-50 transition-all"
             >
               SUBMIT CODE
             </button>

@@ -68,11 +68,11 @@ const Dashboard = () => {
       <FloatingParticles count={30} />
       {/* Welcome Banner */}
       <RevealOnScroll direction="down">
-        <div className="bg-[#161F32] border border-[#1E293B] p-8 rounded-2xl mb-8 shadow-2xl backdrop-blur-xl">
-          <h1 className="text-3xl font-outfit font-bold mb-2 text-[#F9FAFB]">
+        <div className="bg-white border border-[#E2E8F0] p-8 rounded-2xl mb-8 shadow-sm backdrop-blur-xl">
+          <h1 className="text-3xl font-outfit font-bold mb-1 text-[#0F172A]">
             Welcome back, <span className="bg-gradient-to-r from-[#F59E0B] to-[#D97706] bg-clip-text text-transparent">{user?.name}</span>
           </h1>
-          <p className="text-[#D1D5DB]">Continue your elite learning journey</p>
+          <p className="text-[#475569]">Continue your learning journey</p>
         </div>
       </RevealOnScroll>
 
@@ -85,12 +85,12 @@ const Dashboard = () => {
           { icon: Flame, label: 'Streak', value: `${stats.streak}d`, color: 'from-red-500 to-pink-500' }
         ].map((stat, idx) => (
           <RevealOnScroll key={idx} direction="scale" delay={idx * 0.1}>
-            <div className="bg-[#161F32] border border-[#1E293B] p-6 rounded-2xl text-center hover:border-[#F59E0B]/30 transition-all duration-300 group">
+            <div className="bg-white border border-[#E2E8F0] p-6 rounded-2xl text-center hover:border-[#F59E0B]/30 transition-all duration-300 group shadow-sm hover:shadow-md">
               <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
                 <stat.icon className="text-white" size={20} />
               </div>
-              <p className="text-2xl font-bold text-[#F9FAFB]">{stat.value}</p>
-              <p className="text-[#D1D5DB] text-sm uppercase tracking-wider font-semibold">{stat.label}</p>
+              <p className="text-2xl font-bold text-[#0F172A]">{stat.value}</p>
+              <p className="text-[#475569] text-sm uppercase tracking-wider font-semibold">{stat.label}</p>
             </div>
           </RevealOnScroll>
         ))}
@@ -98,7 +98,7 @@ const Dashboard = () => {
 
       {/* Quick Actions */}
       <RevealOnScroll direction="up">
-        <div className="bg-[#161F32] border border-[#1E293B] p-6 rounded-2xl mb-8">
+        <div className="bg-white border border-[#E2E8F0] p-6 rounded-2xl mb-8 shadow-sm">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#9CA3AF]" size={20} />
@@ -107,7 +107,7 @@ const Dashboard = () => {
                 placeholder="Search courses..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-[#F9FAFB] placeholder-[#9CA3AF]"
+                className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-[#0F172A] placeholder-[#9CA3AF]"
               />
             </div>
             <Link to="/build" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] px-8 py-3 rounded-xl font-bold flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg">
@@ -122,7 +122,7 @@ const Dashboard = () => {
       <div className="mb-8">
         <RevealOnScroll direction="right">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-            <h2 className="text-3xl font-outfit font-bold text-[#F9FAFB]">My Courses</h2>
+            <h2 className="text-3xl font-outfit font-bold text-[#0F172A]">My Courses</h2>
             
             <div className="flex flex-wrap justify-center gap-2">
               {['all', 'in_progress', 'completed', 'not_started'].map(f => (
@@ -132,7 +132,7 @@ const Dashboard = () => {
                   className={`px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 ${
                     filter === f 
                       ? 'bg-[#F59E0B] text-[#0A1122] shadow-[0_0_20px_rgba(245,158,11,0.2)]' 
-                      : 'bg-[#161F32] text-[#9CA3AF] border border-[#1E293B] hover:border-[#F59E0B]/50'
+                      : 'bg-white text-[#475569] border border-[#E2E8F0] hover:border-[#F59E0B]/50'
                   }`}
                 >
                   {f.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}
@@ -144,11 +144,11 @@ const Dashboard = () => {
 
         {filteredCourses.length === 0 ? (
           <RevealOnScroll direction="scale">
-            <div className="bg-[#161F32] border border-[#1E293B] rounded-2xl p-16 text-center border-dashed">
-              <div className="w-20 h-20 bg-[#0A1122] rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white border border-[#E2E8F0] rounded-2xl p-16 text-center border-dashed">
+              <div className="w-20 h-20 bg-[#F8FAFC] rounded-full flex items-center justify-center mx-auto mb-6">
                  <Plus className="text-[#F59E0B]" size={32} />
               </div>
-              <p className="text-[#D1D5DB] text-xl mb-8">Your journey is waiting to begin.</p>
+              <p className="text-[#475569] text-xl mb-8">Your journey is waiting to begin.</p>
               <Link to="/build" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg">
                 Forge Your First Path
               </Link>

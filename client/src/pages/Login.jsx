@@ -34,31 +34,35 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
-      <RevealOnScroll direction="scale">
-        <div className="bg-[#161F32] border border-[#1E293B] rounded-2xl shadow-2xl p-8 w-full max-w-md backdrop-blur-xl">
-        <h2 className="text-3xl font-outfit font-bold text-center mb-8 text-[#F9FAFB]">
-          Welcome <span className="text-[#F59E0B]">Back</span>
-        </h2>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="w-full max-w-md bg-white border border-[#E2E8F0] rounded-3xl shadow-xl p-10 relative z-10"
+      >
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-outfit font-black text-[#0F172A] mb-2 tracking-tight">Login</h2>
+          <p className="text-[#475569] font-medium uppercase tracking-[0.2em] text-xs">Return to the Codex</p>
+        </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Email</label>
+            <label className="block text-sm font-medium mb-2 text-[#475569]">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#9CA3AF]"
+              className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#0F172A] placeholder-[#9CA3AF]"
               placeholder="your@email.com"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Password</label>
+            <label className="block text-sm font-medium mb-2 text-[#475569]">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#9CA3AF]"
+              className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#0F172A] placeholder-[#9CA3AF]"
               placeholder="••••••••"
             />
           </div>
@@ -78,14 +82,14 @@ const Login = () => {
           </Link>
         </div>
 
-        <div className="mt-4 text-center text-[#D1D5DB]">
+        <div className="mt-4 text-center text-[#475569]">
           New here?{' '}
           <Link to="/register" className="text-[#F59E0B] hover:text-[#D97706] font-medium hover:underline">
             Create an Account
           </Link>
         </div>
-      </div>
-      </RevealOnScroll>
+        </div>
+      </motion.div>
     </div>
   );
 };

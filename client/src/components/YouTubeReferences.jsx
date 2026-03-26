@@ -41,7 +41,7 @@ const YouTubeReferences = ({ course, topic }) => {
 
   if (loading) {
     return (
-      <div className="bg-[#161F32] border border-[#1E293B] rounded-3xl p-8 shadow-2xl">
+      <div className="bg-white border border-[#E2E8F0] rounded-3xl p-8 shadow-sm">
         <div className="flex items-center justify-center py-12">
           <SmoothLoader size="md" />
         </div>
@@ -56,7 +56,7 @@ const YouTubeReferences = ({ course, topic }) => {
           <div className="w-10 h-10 bg-[#FF0000]/10 rounded-xl flex items-center justify-center">
             <Youtube className="text-[#FF0000]" size={24} />
           </div>
-          <h3 className="text-xl font-outfit font-bold text-[#F9FAFB]">Sustenance Rituals</h3>
+          <h3 className="text-xl font-outfit font-bold text-[#0F172A]">Recommended Resources</h3>
         </div>
       </RevealOnScroll>
 
@@ -68,12 +68,12 @@ const YouTubeReferences = ({ course, topic }) => {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-[#0A1122] border border-[#1E293B] rounded-2xl overflow-hidden transition-all duration-300 block hover:border-[#F59E0B]/30"
+              className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl overflow-hidden transition-all duration-300 block hover:border-[#F59E0B]/30 hover:shadow-md"
             >
               <img src={video.thumbnail} alt={video.title} className="w-full aspect-video object-cover" />
               <div className="p-4">
-                <h4 className="font-bold text-sm text-[#F9FAFB] line-clamp-2 mb-2 leading-relaxed">{video.title}</h4>
-                <p className="text-[#4B5563] text-xs font-semibold">{video.channelTitle}</p>
+                <h4 className="font-bold text-sm text-[#0F172A] line-clamp-2 mb-2 leading-relaxed">{video.title}</h4>
+                <p className="text-[#64748B] text-xs font-semibold">{video.channelTitle}</p>
               </div>
             </motion.a>
           </RevealOnScroll>

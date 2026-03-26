@@ -52,15 +52,19 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
-      <RevealOnScroll direction="scale">
-        <div className="bg-[#161F32] border border-[#1E293B] rounded-2xl shadow-2xl p-8 w-full max-w-md backdrop-blur-xl">
-        <h2 className="text-3xl font-outfit font-bold text-center mb-8 text-[#F9FAFB]">
-          Join the <span className="text-[#F59E0B]">Elite</span>
-        </h2>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="w-full max-w-lg bg-white border border-[#E2E8F0] rounded-3xl shadow-xl p-10 relative z-10 my-8"
+      >
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-outfit font-black text-[#0F172A] mb-2 tracking-tight">Register</h2>
+          <p className="text-[#475569] font-medium uppercase tracking-[0.2em] text-xs">Begin Your Ascension</p>
+        </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Full Name</label>
+            <label className="block text-sm font-medium mb-2 text-[#475569]">Full Name</label>
             <input
               type="text"
               value={name}
@@ -71,7 +75,7 @@ const Register = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Email Address</label>
+            <label className="block text-sm font-medium mb-2 text-[#475569]">Email Address</label>
             <input
               type="email"
               value={email}
@@ -82,7 +86,7 @@ const Register = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Choose Password</label>
+            <label className="block text-sm font-medium mb-2 text-[#475569]">Choose Password</label>
             <input
               type="password"
               value={password}
@@ -93,7 +97,7 @@ const Register = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2 text-[#D1D5DB]">Confirm Password</label>
+            <label className="block text-sm font-medium mb-2 text-[#475569]">Confirm Password</label>
             <input
               type="password"
               value={confirmPassword}
@@ -112,14 +116,14 @@ const Register = () => {
           </button>
         </form>
 
-        <div className="mt-8 text-center text-[#D1D5DB]">
+        <div className="mt-8 text-center text-[#475569]">
           Already an initiate?{' '}
           <Link to="/login" className="text-[#F59E0B] hover:text-[#D97706] font-medium hover:underline">
             Login
           </Link>
         </div>
-      </div>
-      </RevealOnScroll>
+        </div>
+      </motion.div>
     </div>
   );
 };

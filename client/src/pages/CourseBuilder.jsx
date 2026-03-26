@@ -59,15 +59,15 @@ const CourseBuilder = () => {
     <div className="max-w-3xl mx-auto px-4 py-12 relative">
       <FloatingParticles count={15} />
       <RevealOnScroll direction="scale">
-        <div className="bg-[#161F32] border border-[#1E293B] rounded-3xl shadow-2xl p-10 backdrop-blur-xl">
+        <div className="bg-white border border-[#E2E8F0] rounded-3xl shadow-xl p-10 backdrop-blur-xl">
           <RevealOnScroll direction="down" delay={0.2}>
             <div className="flex items-center space-x-4 mb-10">
               <div className="w-14 h-14 bg-[#F59E0B]/10 rounded-2xl flex items-center justify-center">
                 <Sparkles className="text-[#F59E0B]" size={32} />
               </div>
               <div>
-                <h1 className="text-3xl font-outfit font-bold text-[#F9FAFB]">Forge Learning Path</h1>
-                <p className="text-[#D1D5DB]">Let AI architect your mastery journey</p>
+                <h1 className="text-3xl font-outfit font-bold text-[#0F172A]">Forge Learning Path</h1>
+                <p className="text-[#475569]">Let AI architect your mastery journey</p>
               </div>
             </div>
           </RevealOnScroll>
@@ -75,13 +75,13 @@ const CourseBuilder = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <RevealOnScroll direction="left" delay={0.3}>
               <div>
-                <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">What is your destination?</label>
+                <label className="block text-lg font-medium mb-3 text-[#0F172A]">What is your destination?</label>
                 <input
                   type="text"
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   placeholder="e.g., Quantum Computing, Neural Networks, Advanced UI Design"
-                  className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB] placeholder-[#9CA3AF] transition-all"
+                  className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#0F172A] placeholder-[#9CA3AF] transition-all"
                   required
                 />
               </div>
@@ -90,27 +90,27 @@ const CourseBuilder = () => {
             <RevealOnScroll direction="right" delay={0.4}>
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">Intensity (Hrs/Day)</label>
+                  <label className="block text-lg font-medium mb-3 text-[#0F172A]">Intensity (Hrs/Day)</label>
                   <input
                     type="number"
                     value={hoursPerDay}
                     onChange={(e) => setHoursPerDay(Number(e.target.value))}
                     min="1"
                     max="12"
-                    className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB]"
+                    className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#0F172A]"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">Duration (Weeks)</label>
+                  <label className="block text-lg font-medium mb-3 text-[#0F172A]">Duration (Weeks)</label>
                   <input
                     type="number"
                     value={totalWeeks}
                     onChange={(e) => setTotalWeeks(Number(e.target.value))}
                     min="1"
                     max="52"
-                    className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB]"
+                    className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#0F172A]"
                     required
                   />
                 </div>
@@ -119,7 +119,7 @@ const CourseBuilder = () => {
 
             <RevealOnScroll direction="up" delay={0.5}>
               <div>
-                <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">Mastery Level</label>
+                <label className="block text-lg font-medium mb-3 text-[#0F172A]">Mastery Level</label>
                 <div className="grid grid-cols-3 gap-4">
                   {['beginner', 'intermediate', 'advanced'].map(lvl => (
                     <motion.button
@@ -130,8 +130,8 @@ const CourseBuilder = () => {
                       whileTap={{ scale: 0.95 }}
                       className={`py-4 rounded-xl font-bold transition-all duration-300 ${
                         level === lvl
-                          ? 'bg-[#F59E0B] text-[#0A1122] shadow-[0_0_20px_rgba(245,158,11,0.2)]'
-                          : 'bg-[#0A1122] text-[#D1D5DB] border border-[#1E293B] hover:border-[#F59E0B]/50'
+                          ? 'bg-[#F59E0B] text-white shadow-[0_0_20px_rgba(245,158,11,0.2)]'
+                        : 'bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] hover:border-[#F59E0B]/50'
                       }`}
                     >
                       {lvl.charAt(0).toUpperCase() + lvl.slice(1)}
@@ -143,12 +143,12 @@ const CourseBuilder = () => {
 
             <RevealOnScroll direction="left" delay={0.6}>
               <div>
-                <label className="block text-lg font-medium mb-3 text-[#F9FAFB]">What is your primary goal?</label>
+                <label className="block text-lg font-medium mb-3 text-[#0F172A]">What is your primary goal?</label>
                 <textarea
                   value={goal}
                   onChange={(e) => setGoal(e.target.value)}
                   placeholder="e.g., Become a Senior Architect, Build a billion-dollar startup core, Master the fundamentals"
-                  className="w-full bg-[#0A1122] border border-[#1E293B] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#F9FAFB] placeholder-[#9CA3AF] min-h-[120px]"
+                  className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-lg text-[#0F172A] placeholder-[#9CA3AF] min-h-[120px]"
                   required
                 />
               </div>
@@ -158,7 +158,7 @@ const CourseBuilder = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] text-xl py-5 rounded-2xl font-black transition-all duration-500 shadow-[0_0_30px_rgba(245,158,11,0.2)] hover:shadow-[0_0_50px_rgba(245,158,11,0.4)] disabled:opacity-50 flex items-center justify-center space-x-3 group"
+                className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-white text-xl py-5 rounded-2xl font-black transition-all duration-500 shadow-[0_0_30px_rgba(245,158,11,0.2)] hover:shadow-[0_0_50px_rgba(245,158,11,0.4)] disabled:opacity-50 flex items-center justify-center space-x-3 group"
               >
                 {loading ? (
                   <div className="flex items-center space-x-3">

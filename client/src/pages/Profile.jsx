@@ -20,7 +20,7 @@ const Profile = () => {
                 <motion.div 
                   whileHover={{ scale: 1.1, rotate: 360 }}
                   transition={{ duration: 0.5 }}
-                  className="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-3xl font-bold text-bg-primary"
+                  className="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-3xl font-bold text-white shadow-lg"
                 >
                   {user?.name?.charAt(0).toUpperCase()}
                 </motion.div>
@@ -33,7 +33,7 @@ const Profile = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <RevealOnScroll direction="up" delay={0.3}>
-                <div className="bg-white-hover p-6 rounded-lg card-3d">
+                <div className="bg-bg-card-hover p-6 rounded-lg card-3d">
                   <div className="flex items-center space-x-3 mb-2">
                     <Mail className="text-indigo-600" size={24} />
                     <span className="text-gray-600">Email</span>
@@ -43,7 +43,7 @@ const Profile = () => {
               </RevealOnScroll>
 
               <RevealOnScroll direction="up" delay={0.4}>
-                <div className="bg-white-hover p-6 rounded-lg card-3d">
+                <div className="bg-bg-card-hover p-6 rounded-lg card-3d">
                   <div className="flex items-center space-x-3 mb-2">
                     <Flame className="text-error" size={24} />
                     <span className="text-gray-600">Streak</span>
@@ -53,7 +53,7 @@ const Profile = () => {
               </RevealOnScroll>
 
               <RevealOnScroll direction="up" delay={0.5}>
-                <div className="bg-white-hover p-6 rounded-lg card-3d">
+                <div className="bg-bg-card-hover p-6 rounded-lg card-3d">
                   <div className="flex items-center space-x-3 mb-2">
                     <Calendar className="text-indigo-600" size={24} />
                     <span className="text-gray-600">Member Since</span>
@@ -69,7 +69,7 @@ const Profile = () => {
               </RevealOnScroll>
 
               <RevealOnScroll direction="up" delay={0.6}>
-                <div className="bg-white-hover p-6 rounded-lg card-3d">
+                <div className="bg-bg-card-hover p-6 rounded-lg card-3d">
                   <div className="flex items-center space-x-3 mb-2">
                     <User className="text-indigo-600" size={24} />
                     <span className="text-gray-600">Account Type</span>
