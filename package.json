@@ -1,0 +1,14 @@
+{
+  "name": "ai-course-builder",
+  "version": "1.0.0",
+  "description": "AI-Powered Course Builder - MERN Stack",
+  "main": "server/index.js",
+  "scripts": {
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": ["ai", "course", "builder", "mern"],
+  "author": "",
+  "license": "MIT"
+}
