@@ -21,9 +21,10 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'http://localhost:5173',
+    'https://ai-course-builder-bxxs.onrender.com', // Explicitly add the frontend URL from screenshot
+    /\.onrender\.com$/,
     /\.netlify\.app$/,
-    /\.vercel\.app$/,
-    /\.render\.com$/
+    /\.vercel\.app$/
   ],
   credentials: true
 }));
