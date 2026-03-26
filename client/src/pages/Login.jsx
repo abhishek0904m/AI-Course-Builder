@@ -70,7 +70,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] py-4 rounded-xl font-bold transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.2)] disabled:opacity-50"
+            className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-white py-4 rounded-xl font-bold transition-all duration-300 shadow-lg disabled:opacity-50"
           >
             {loading ? 'Entering Presence...' : 'Login'}
           </button>
@@ -87,7 +87,6 @@ const Login = () => {
           <Link to="/register" className="text-[#F59E0B] hover:text-[#D97706] font-medium hover:underline">
             Create an Account
           </Link>
-        </div>
         </div>
       </motion.div>
     </div>

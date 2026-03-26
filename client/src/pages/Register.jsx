@@ -69,7 +69,7 @@ const Register = () => {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#6B7280]"
+              className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#0F172A] placeholder-[#94A3B8]"
               placeholder="John Doe"
             />
           </div>
@@ -80,7 +80,7 @@ const Register = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#6B7280]"
+              className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#0F172A] placeholder-[#94A3B8]"
               placeholder="your@email.com"
             />
           </div>
@@ -91,7 +91,7 @@ const Register = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#6B7280]"
+              className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#0F172A] placeholder-[#94A3B8]"
               placeholder="••••••••"
             />
           </div>
@@ -102,7 +102,7 @@ const Register = () => {
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full bg-[#0A1122] border border-[#1E293B] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#F9FAFB] placeholder-[#6B7280]"
+              className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent text-[#0F172A] placeholder-[#94A3B8]"
               placeholder="••••••••"
             />
           </div>
@@ -110,7 +110,7 @@ const Register = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1122] py-4 rounded-xl font-bold transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.2)] disabled:opacity-50"
+            className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-white py-4 rounded-xl font-bold transition-all duration-300 shadow-lg disabled:opacity-50"
           >
             {loading ? 'Forging Profile...' : 'Sign Up'}
           </button>
@@ -121,7 +121,6 @@ const Register = () => {
           <Link to="/login" className="text-[#F59E0B] hover:text-[#D97706] font-medium hover:underline">
             Login
           </Link>
-        </div>
         </div>
       </motion.div>
     </div>
