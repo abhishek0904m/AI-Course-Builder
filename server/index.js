@@ -18,7 +18,13 @@ dotenv.config({ path: path.join(__dirname, '..', '.env') });
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    /\.netlify\.app$/,
+    /\.vercel\.app$/,
+    /\.render\.com$/
+  ],
   credentials: true
 }));
 app.use(express.json());

@@ -360,31 +360,31 @@ The application will be available at:
 - Grid layouts adapt to screen size
 - Touch-friendly buttons and interactions
 
-## 🚧 Troubleshooting
+## 🚀 Deploy to Render (Step-by-Step)
 
-### MongoDB Connection Error
-```bash
-# Make sure MongoDB is running
-mongod
+### 1. Database Setup (MongoDB Atlas)
+- Create a free cluster at [mongodb.com](https://www.mongodb.com/cloud/atlas).
+- Network Access: Allow access from `0.0.0.0/0`.
+- Database Access: Create a user and password.
+- Get your connection string.
 
-# Or check your MONGODB_URI in .env
-```
+### 2. Backend Deployment (Web Service)
+- Create a new **Web Service** on Render.
+- Connect this GitHub repository.
+- **Root Directory**: `server`
+- **Build Command**: `npm install`
+- **Start Command**: `node index.js`
+- **Env Vars**: Add `MONGODB_URI`, `GEMINI_API_KEY`, `GROQ_API_KEY`, `YOUTUBE_API_KEY`, `JWT_SECRET`, `PORT=5000`.
 
-### AI API Error (Gemini / Groq)
-- Verify your `GEMINI_API_KEY` and `GROQ_API_KEY` are correct in `.env`
-- Check Gemini quota at https://aistudio.google.com/
-- Check Groq quota at https://console.groq.com/
+### 3. Frontend Deployment (Static Site)
+- Create a new **Static Site** on Render.
+- Connect this GitHub repository.
+- **Root Directory**: `client`
+- **Build Command**: `npm install && npm run build`
+- **Publish Directory**: `dist`
+- **Env Vars**: Add `VITE_API_URL=https://your-backend-url.onrender.com/api`.
 
-### YouTube API Error
-- Verify your API key is correct
-- Check API is enabled in Google Cloud Console
-- Ensure you haven't exceeded quota limits
-
-### Port Already in Use
-```bash
-# Change PORT in .env file
-PORT=5001
-```
+---
 
 ## 📝 License
 
