@@ -55,7 +55,8 @@ MONGODB_URI=mongodb://localhost:27017/ai-course-builder
 JWT_SECRET=change_this_to_a_random_secret_key
 
 # API Keys (Required)
-OPENAI_API_KEY=your_openai_api_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 YOUTUBE_API_KEY=your_youtube_api_key_here
 
 # Client Configuration
@@ -136,11 +137,11 @@ taskkill /PID <PID> /F
 lsof -ti:5000 | xargs kill
 ```
 
-### Issue: "OpenAI API error"
+### Issue: "AI API error" (Gemini / Groq)
 **Solution:**
-- Verify API key is correct
-- Check you have credits: https://platform.openai.com/account/usage
-- Ensure you have GPT-4o access
+- Verify `GEMINI_API_KEY` is correct (get it at https://aistudio.google.com/)
+- Verify `GROQ_API_KEY` is correct (get it at https://console.groq.com/)
+- Check your API quota on both platforms
 
 ### Issue: "YouTube API error"
 **Solution:**
@@ -213,7 +214,8 @@ npm start
 | PORT | Backend server port | 5000 |
 | MONGODB_URI | MongoDB connection string | mongodb://localhost:27017/ai-course-builder |
 | JWT_SECRET | Secret key for JWT tokens | random_secret_key_123 |
-| OPENAI_API_KEY | OpenAI API key | sk-... |
+| GEMINI_API_KEY | Google Gemini API key | AIza... |
+| GROQ_API_KEY | Groq API key (Llama 3.1) | gsk_... |
 | YOUTUBE_API_KEY | YouTube Data API key | AIza... |
 | VITE_API_URL | Backend API URL for frontend | http://localhost:5000/api |
 

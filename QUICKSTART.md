@@ -6,7 +6,8 @@ Get your AI Course Builder up and running in 5 minutes!
 
 - [ ] Node.js v18+ installed
 - [ ] MongoDB installed (or MongoDB Atlas account)
-- [ ] OpenAI API key
+- [ ] Google Gemini API key
+- [ ] Groq API key
 - [ ] YouTube Data API key
 
 ## Step-by-Step Setup
@@ -27,7 +28,8 @@ PORT=5000
 MONGODB_URI=mongodb://localhost:27017/ai-course-builder
 JWT_SECRET=my_super_secret_key_12345
 
-OPENAI_API_KEY=sk-your-openai-key-here
+GEMINI_API_KEY=your-gemini-api-key-here
+GROQ_API_KEY=your-groq-api-key-here
 YOUTUBE_API_KEY=your-youtube-api-key-here
 
 VITE_API_URL=http://localhost:5000/api
@@ -80,11 +82,17 @@ Navigate to: **http://localhost:3000**
 
 ## Getting API Keys
 
-### OpenAI API Key (Free $5 credit for new accounts)
-1. Visit: https://platform.openai.com/
+### Google Gemini API Key (Free tier available)
+1. Visit: https://aistudio.google.com/
+2. Sign in with Google account
+3. Click "Get API key"
+4. Create and copy the key
+
+### Groq API Key (Free tier — Llama 3.1 8B)
+1. Visit: https://console.groq.com/
 2. Sign up / Login
 3. Go to: API Keys section
-4. Click: "Create new secret key"
+4. Click "Create API Key"
 5. Copy and save the key
 
 ### YouTube Data API Key (Free - 10,000 requests/day)
@@ -105,10 +113,10 @@ mongod
 # Or use MongoDB Atlas cloud database
 ```
 
-### "OpenAI API Error"
-- Check your API key is correct
-- Verify you have credits in your account
-- Make sure you have GPT-4o access
+### "AI API Error" (Gemini / Groq)
+- Check `GEMINI_API_KEY` is correct in `.env`
+- Check `GROQ_API_KEY` is correct in `.env`
+- Verify quota at https://aistudio.google.com/ or https://console.groq.com/
 
 ### "Port 3000 already in use"
 ```bash

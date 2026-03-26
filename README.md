@@ -1,10 +1,10 @@
 # 🎓 AI Course Builder - MERN Stack
 
-A complete, production-ready AI-Powered Course Builder web application using the MERN stack (MongoDB, Express.js, React.js, Node.js) with OpenAI GPT-4o integration.
+A complete, production-ready AI-Powered Course Builder web application using the MERN stack (MongoDB, Express.js, React.js, Node.js) with a Multi-Model AI approach using Google Gemini 1.5 Pro + Groq (Llama 3.1 8B).
 
 ## ✨ Features
 
-- 🤖 **AI-Powered Roadmap Generation** - Create personalized learning paths with GPT-4o
+- 🤖 **AI-Powered Roadmap Generation** - Create personalized learning paths using Gemini 1.5 Pro + Groq (Llama 3.1 8B)
 - 📚 **Concept-by-Concept Teaching** - Structured AI explanations for every topic
 - 🎯 **Smart Quizzes** - AI-generated assessments with instant feedback
 - 📺 **YouTube Integration** - Curated video resources for each concept
@@ -55,7 +55,8 @@ ai-course-builder/
 
 - Node.js (v18 or higher)
 - MongoDB (local or Atlas)
-- OpenAI API Key
+- Google Gemini API Key
+- Groq API Key
 - YouTube Data API Key
 
 ### Step 1: Clone and Install Dependencies
@@ -87,8 +88,11 @@ PORT=5000
 MONGODB_URI=mongodb://localhost:27017/ai-course-builder
 JWT_SECRET=your_super_secret_jwt_key_here_change_in_production
 
-# AI
-OPENAI_API_KEY=your_openai_api_key
+# AI (Google Gemini)
+GEMINI_API_KEY=your_gemini_api_key
+
+# AI (Groq - Llama 3.1)
+GROQ_API_KEY=your_groq_api_key
 
 # YouTube
 YOUTUBE_API_KEY=your_youtube_data_api_key
@@ -99,12 +103,19 @@ VITE_API_URL=http://localhost:5000/api
 
 ### Step 3: Get API Keys
 
-**OpenAI API Key:**
-1. Go to https://platform.openai.com/
+**Google Gemini API Key:**
+1. Go to https://aistudio.google.com/
+2. Sign in with your Google account
+3. Click "Get API key"
+4. Create a new API key
+5. Copy and paste into `.env` as `GEMINI_API_KEY`
+
+**Groq API Key (Llama 3.1):**
+1. Go to https://console.groq.com/
 2. Sign up or log in
 3. Navigate to API Keys section
 4. Create a new API key
-5. Copy and paste into `.env`
+5. Copy and paste into `.env` as `GROQ_API_KEY`
 
 **YouTube Data API Key:**
 1. Go to https://console.cloud.google.com/
@@ -191,7 +202,7 @@ The application will be available at:
 | Backend | Node.js, Express.js |
 | Database | MongoDB with Mongoose |
 | Auth | JWT (JSON Web Tokens) + bcryptjs |
-| AI | OpenAI API (GPT-4o) |
+| AI | Google Gemini 1.5 Pro + Groq (Llama 3.1 8B) — Multi-Model |
 | YouTube | YouTube Data API v3 |
 | State Management | React Context API |
 | Animations | Framer Motion |
@@ -288,7 +299,7 @@ The application will be available at:
 ## 🎯 Key Features Implementation
 
 ### AI Roadmap Generation
-- Uses GPT-4o to create structured learning paths
+- Uses Gemini 1.5 Pro + Groq (Llama 3.1 8B) in a multi-model approach to create structured learning paths
 - Considers user's time availability, skill level, and goals
 - Generates week-by-week breakdown with topics
 
@@ -359,10 +370,10 @@ mongod
 # Or check your MONGODB_URI in .env
 ```
 
-### OpenAI API Error
-- Verify your API key is correct
-- Check you have credits in your OpenAI account
-- Ensure you're using GPT-4o model access
+### AI API Error (Gemini / Groq)
+- Verify your `GEMINI_API_KEY` and `GROQ_API_KEY` are correct in `.env`
+- Check Gemini quota at https://aistudio.google.com/
+- Check Groq quota at https://console.groq.com/
 
 ### YouTube API Error
 - Verify your API key is correct
@@ -389,4 +400,4 @@ For issues or questions, please open an issue on GitHub.
 
 ---
 
-Built with ❤️ using MERN Stack + AI
+Built with ❤️ using MERN Stack + Gemini 1.5 Pro + Groq (Llama 3.1 8B)
